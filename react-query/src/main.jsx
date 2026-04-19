@@ -4,7 +4,11 @@ import './index.css'
 import App from './App.jsx'
 
 const QUERY_ID = {
-  superheroes: "super-heroes"
+  superheroes: "super-heroes",
+  friends: "friends",
+  youtube: "yt",
+  channel: "channel",
+  colors: "colors",
 }
 
 createRoot(document.getElementById('root')).render(

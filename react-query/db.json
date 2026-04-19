@@ -1,54 +1,182 @@
 {
   "users": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Basdsnky",
       "last_name": "Bissill"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Cornie",
       "last_name": "Trelease"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Sherlocke",
       "last_name": "Aizlewood"
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Theodor",
       "last_name": "Adamovicz"
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Wilfred",
       "last_name": "Hardy-Piggin"
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Fred",
       "last_name": "Woan"
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Tessi",
       "last_name": "Poker"
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Anny",
       "last_name": "Barsham"
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Iver",
       "last_name": "Ambrogi"
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Witty",
       "last_name": "Elesander"
+    },
+    {
+      "name": "dsfsdf",
+      "last_name": "hjgjghj",
+      "id": "W-bhdsBDbyU"
+    },
+    {
+      "name": "super",
+      "last_name": "hero",
+      "id": "burRAbJ9IE8"
+    },
+    {
+      "name": "catwomen",
+      "last_name": "this",
+      "id": "DEhk8LycYOQ"
+    },
+    {
+      "name": "qwer",
+      "last_name": "fsdfds",
+      "id": "PVbmUXYGwnk"
+    },
+    {
+      "name": "asdf",
+      "last_name": "dfvdfg",
+      "id": "lVTd4AiUb8M"
+    },
+    {
+      "name": "iuoiuo",
+      "last_name": "sca",
+      "id": "7Yumo0l_FfE"
+    },
+    {
+      "name": "spidermN",
+      "last_name": "XVXCVX",
+      "id": "vc9N6xqlePc"
+    },
+    {
+      "name": "spidermN",
+      "last_name": "XVXCVX",
+      "id": "cNZ9Ui_-kw0"
+    },
+    {
+      "name": "spidermN",
+      "last_name": "XVXCVX",
+      "id": "SW4i4yFGz30"
+    },
+    {
+      "name": "new hero",
+      "last_name": "hbjbj",
+      "id": "CLXndKKDuBs"
+    },
+    {
+      "name": "new hero",
+      "last_name": "hbjbj",
+      "id": "YwlWbQeq6ag"
     }
-  ]
+  ],
+  "friends": [
+    {
+      "id": "1",
+      "first_name": "Goran"
+    },
+    {
+      "id": "2",
+      "first_name": "Meryl"
+    },
+    {
+      "id": "3",
+      "first_name": "Frederico"
+    },
+    {
+      "id": "4",
+      "first_name": "Klement"
+    },
+    {
+      "id": "5",
+      "first_name": "Kippie"
+    }
+  ],
+  "youtube": [
+    {
+      "first_name": "Alfie",
+      "id": "amatevushev0@mozilla.org",
+      "channel": "Murazik-Legros"
+    }
+  ],
+  "channels": [
+    {
+      "id": "Murazik-Legros",
+      "courses": [
+        "react",
+        "node"
+      ]
+    }
+  ],
+  "colors": [
+    {
+      "id": "1",
+      "label": "Khaki"
+    },
+    {
+      "id": "2",
+      "label": "Violet"
+    },
+    {
+      "id": "3",
+      "label": "Teal"
+    },
+    {
+      "id": "4",
+      "label": "Red"
+    },
+    {
+      "id": "5",
+      "label": "Red"
+    },
+    {
+      "id": "6",
+      "label": "Violet"
+    },
+    {
+      "id": "7",
+      "label": "Puce"
+    },
+    {
+      "id": "8",
+      "label": "Khaki"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

@@ -1,30 +1,54 @@
-import React from "react";
-import { useQuery } from "@tanstack/react-query";
-import QUERY_ID from "../../main";
-import axios from "axios";
-
-const fetchSuperheroes = async () => {
-      const res = await axios.get(`${import.meta.env.VITE_BASE_URL}users`);
-      return res.data
-    }
+import React, { useEffect, useState } from "react";
+import useSuperHeroesData, { useAddSuperHeroData } from "../../Hooks/useSuperHeoresData";
+import { Link } from "react-router-dom";
 
 const RQSuperHeroes = () => {
-  const { isLoading, data, isError, error, isFetching } = useQuery({
-    queryKey: [QUERY_ID.superheroes],
-    queryFn: fetchSuperheroes,
-    gcTime: 5000,
-  });
+  const [name, setName] = useState("");
+  const [ego, setEgo] = useState("");
 
-  console.log(isLoading, isFetching)
+  const { isLoading, data, isError, error, isFetching, refetch, isSuccess } =
+    useSuperHeroesData();
 
-  if (isLoading) return <div>Loading...</div>;
-  if(isError) return <h2>{error?.message}</h2>
+  //   console.log(isLoading, isFetching)
+
+  const { mutate, isLoading: postIsLoading, error: postError, isError: postIsError } = useAddSuperHeroData()
+
+
+  const handleAddHeroClick = () => {
+    const hero = { name, last_name: ego }
+    mutate(hero)
+  }
+
+  useEffect(() => {
+    if (isSuccess) {
+      console.log("Performing sideeffects after query success");
+    }
+  }, [isSuccess]);
+
+  useEffect(() => {
+    if (isError) {
+      console.log("Performing sideeffects after query error");
+    }
+  }, [isError]);
+
+  if (isLoading || isFetching) return <div>Loading...</div>;
+  if (isError) return <h2>{error?.message}</h2>;
   return (
     <div>
       <h2>RQSuperheroes</h2>
+      <input value={name} onChange={(e) => setName(e.target.value)} />
+      <input value={ego} onChange={(e) => setEgo(e.target.value)} />
+      <button onClick={handleAddHeroClick}>Add hero</button>
+      <br />
       {data?.map((hero) => {
-        return <div key={hero.id}>{hero.name}</div>;
+        return (
+          <React.Fragment key={hero.id}>
+            <Link to={`/rq-super-heroes/${hero.id}`}>{hero.name}</Link>
+            <br />
+          </React.Fragment>
+        );
       })}
+      <button onClick={refetch}>fetch</button>
     </div>
   );
 };

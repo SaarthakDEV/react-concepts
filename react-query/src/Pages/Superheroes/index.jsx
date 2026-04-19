@@ -8,7 +8,7 @@ const Superheroes = () => {
 
   useEffect(() => {
     axios
-      .get(`${import.meta.env.VITE_BASE_URL}udsers`)
+      .get(`${import.meta.env.VITE_BASE_URL}users`)
       .then((response) => {
         setData(response.data);
       })
